@@ -1,0 +1,28 @@
+.title{
+    display: inline-block;
+    margin-left: 90px;
+    color: black;
+    width: 50%;
+}
+
+.picture{
+    margin-left: 110px;
+    width: 70%;
+}
+
+.cards{
+    display: flex;   
+}
+
+.pice{
+    width: 600px;
+    max-width: 600px;
+}
+
+.imgg{
+    max-height: 400px;
+}
+
+.cardsPic{
+    display: flex;
+}

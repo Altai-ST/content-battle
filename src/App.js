@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+
+import { SingIn } from './components/SingIn';
+import { Leading } from './components/Leading'
+import { SingUpOne } from './components/SingUp';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { LoginIn } from './container/SingUpFunc';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Router>
+       <Switch>
+         <Route exact path='/'>
+          <SingIn/>
+         </Route>
+         <Route path='/Lead'>
+           <Leading/>
+         </Route>
+         <Route path='/Reg'>
+           <SingUpOne/>
+          {/* <LoginIn/> */}
+         </Route>
+       </Switch>
+     </Router>
     </div>
   );
 }

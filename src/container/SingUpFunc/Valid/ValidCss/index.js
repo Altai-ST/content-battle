@@ -1,0 +1,17 @@
+
+import React from 'react'
+
+import styles from './validForm.module.css'
+
+
+export const Input = ({input, meta, ...props})=>{
+    const hasError = meta.touched && meta.error
+    return(
+        <div className={styles.formControl + ' '+ (hasError ? styles.error : '')}>
+            <div>
+                <input {...input} {...props}/>
+            </div>
+            { hasError && <span className={styles.errors}>{meta.error}</span>}
+        </div>
+    )
+}

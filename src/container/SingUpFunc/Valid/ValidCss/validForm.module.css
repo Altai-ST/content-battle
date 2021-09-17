@@ -1,0 +1,7 @@
+.formControl.error input{
+    border: solid red 5px;
+}
+
+.errors{
+    color: red
+}
